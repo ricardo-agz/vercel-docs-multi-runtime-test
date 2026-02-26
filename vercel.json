@@ -1,0 +1,20 @@
+{
+    "experimentalServices": {
+      "landing": {
+        "entrypoint": "apps/web",
+        "routePrefix": "/"
+      },
+      "dashboard": {
+        "entrypoint": "apps/dashboard",
+        "routePrefix": "/dashboard"
+      },
+      "backend": {
+        "entrypoint": "services/backend/main.py",
+        "routePrefix": "/api"
+      },
+      "agent": {
+        "entrypoint": "services/agent/cmd/server/main.go",
+        "routePrefix": "/svc/agent"
+      }
+    }
+}
