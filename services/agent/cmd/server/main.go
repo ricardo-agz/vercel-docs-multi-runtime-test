@@ -9,8 +9,8 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/svc/agent/health", cors(healthHandler))
-	mux.HandleFunc("/svc/agent/tasks", cors(tasksHandler))
+	mux.HandleFunc("/health", cors(healthHandler))
+	mux.HandleFunc("/tasks", cors(tasksHandler))
 
 	port := os.Getenv("PORT")
 	if port == "" {
