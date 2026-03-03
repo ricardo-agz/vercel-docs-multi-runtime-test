@@ -5,12 +5,12 @@ app = Flask(__name__)
 CORS(app)
 
 
-@app.route("/api/health")
+@app.route("/health")
 def health():
     return jsonify({"status": "ok", "service": "backend", "runtime": "python"})
 
 
-@app.route("/api/stats")
+@app.route("/stats")
 def stats():
     return jsonify({
         "requests": 12847,
